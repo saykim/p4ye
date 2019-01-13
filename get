@@ -1,0 +1,16 @@
+IF 구문을 get 으로 반복문을 간단하게 사용하는 방법
+
+'''counts = dict()
+names = ['csev', 'cwen', 'csev', 'zqian', 'cwen']
+for name in names:
+    if name not in counts:
+        counts[name] = 1
+    else:
+        counts[name] = counts[name] + 1
+print(counts)'''
+
+counts = dict()
+names = ['csev', 'chen', 'csev', 'zqian', 'chen']
+for name in names: #if구문을 단순하게 표현할 수 있다. 
+    counts[name] = counts.get(name, 0)+1
+print(counts)
